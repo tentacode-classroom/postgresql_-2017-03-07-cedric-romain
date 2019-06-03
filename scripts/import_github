@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ -d ../data ];
+then
+	rm -rf ../data
+	echo "Création du dossier data."
+	mkdir ../data
+fi
+
+echo "Téléchargement des données en cours..."
+wget --quiet -P ../data https://data.gharchive.org/2017-03-07-{0..1}.json.gz
+
+echo "Décompression des données en cours..."
+gzip -d ../data/2017-03-07-{0..1}.json.gz
+
+echo "Décompression terminée."
