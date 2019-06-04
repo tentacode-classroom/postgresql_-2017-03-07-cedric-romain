@@ -6,5 +6,5 @@ echo "deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main" | sudo tee
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 sudo apt-get update
 
-sudo apt-get install postgresql-11
+sudo apt-get install postgresql-11 -y
 psql --version
