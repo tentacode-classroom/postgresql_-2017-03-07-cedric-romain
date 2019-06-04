@@ -1,2 +1,2 @@
 ALTER SYSTEM SET port = 1234;
-
+SET work_mem = '128MB';
