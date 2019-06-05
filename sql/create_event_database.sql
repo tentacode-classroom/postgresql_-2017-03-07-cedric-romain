@@ -35,4 +35,4 @@ CREATE TABLE push_payload (
 
 INSERT INTO actor(login, display_login, url, avatar_url) VALUES ('jeanmichelaulas', 'jeanmi', 'http://url', '/avatar/url');
 INSERT INTO repository(name,url) VALUES ('projet_yolo','http://url');
-INSERT INTO event(eventtype, created_at, actor_id, repo_id) VALUES ('PushEvent', '2017-03-07T01:00:00Z');
+INSERT INTO event(eventtype, created_at, actor_id, repo_id) VALUES ('PushEvent', '2017-03-07T01:00:00Z','1','1');
