@@ -1,4 +1,6 @@
 ALTER SYSTEM SET port = 1234;
 ALTER SYSTEM SET work_mem = '50MB';
 
-sudo service postgresql restart
+SHOW port;
+SHOW work_mem;
+
