@@ -1,17 +1,9 @@
+DROP DATABASE IF EXISTS gitevents;
 CREATE DATABASE gitevents;
 
 \connect gitevents
 
 CREATE TYPE EVENTYPE AS ENUM ('PushEvent', 'CreateEvent', 'IssueCommentEvent', 'DeleteEvent', 'WatchEvent', 'ForkEvent', 'PullRequestEvent', 'GollumEvent', 'IssuesEvent', 'PullRequestReviewCommentEvent');
-
-CREATE TABLE event(
-   id serial PRIMARY KEY,
-   eventtype EVENTYPE NOT NULL,
-   created_at TIMESTAMP NOT NULL,
-   public BOOL,
-   actor_id INTEGER REFERENCES actor(id),
-   repo_id INTEGER REFERENCES repository(id)
-);
 
 CREATE TABLE actor (
 	id serial PRIMARY KEY,
@@ -25,6 +17,16 @@ CREATE TABLE repository (
 	id serial PRIMARY KEY,
 	name varchar(100) NOT NULL,
 	url varchar(255) NOT NULL
+);
+
+
+CREATE TABLE event(
+   id serial PRIMARY KEY,
+   eventtype EVENTYPE NOT NULL,
+   created_at TIMESTAMP NOT NULL,
+   public BOOL,
+   actor_id INTEGER REFERENCES actor(id),
+   repo_id INTEGER REFERENCES repository(id)
 );
 
 CREATE TABLE push_payload (
