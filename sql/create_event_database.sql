@@ -28,8 +28,9 @@ CREATE TABLE event(
    repo_id INTEGER REFERENCES repository(id)
 );
 
-CREATE TABLE push_payload (
-	commit_id varchar(255) NOT NULL
+CREATE TABLE push_event (
+	commit_count varchar(255) NOT NULL,
+	branch_name varchar(255) NOT NULL
 ) INHERITS (event);
 
 
