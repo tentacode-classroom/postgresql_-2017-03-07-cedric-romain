@@ -33,6 +33,10 @@ CREATE TABLE push_event (
 	branch_name varchar(255) NOT NULL
 ) INHERITS (event);
 
+CREATE TABLE issue_event (
+	issue_title varchar(255) NOT NULL,
+	action varchar(255) NOT NULL
+) INHERITS (event);
 
 INSERT INTO actor(login, display_login, url, avatar_url) VALUES ('jeanmichelaulas', 'jeanmi', 'http://url', '/avatar/url');
 INSERT INTO repository(name,url) VALUES ('projet_yolo','http://url');
