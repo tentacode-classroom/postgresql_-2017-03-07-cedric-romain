@@ -12,3 +12,20 @@ CREATE TABLE event(
    
 );
 
+CREATE TABLE actor (
+	id serial PRIMARY KEY,
+	login varchar(45) NOT NULL,
+	display_login varchar(45) NOT NULL,
+	url varchar(255) NOT NULL,
+	avatar_url varchar(255) NOT NULL
+);
+
+CREATE TABLE repository (
+	id serial PRIMARY KEY,
+	name varchar(100) NOT NULL,
+	url varchar(255) NOT NULL
+);
+
+CREATE TABLE push_payload (
+	commit_id varchar(255) NOT NULL
+) INHERITS (event);
