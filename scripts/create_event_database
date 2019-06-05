@@ -24,7 +24,6 @@ CREATE TABLE event(
    id serial PRIMARY KEY,
    eventtype EVENTYPE NOT NULL,
    created_at TIMESTAMP NOT NULL,
-   public BOOL,
    actor_id INTEGER REFERENCES actor(id),
    repo_id INTEGER REFERENCES repository(id)
 );
@@ -32,3 +31,8 @@ CREATE TABLE event(
 CREATE TABLE push_payload (
 	commit_id varchar(255) NOT NULL
 ) INHERITS (event);
+
+
+INSERT INTO actor(login, display_login, url, avatar_url) VALUES ('jeanmichelaulas', 'jeanmi', 'http://url', '/avatar/url');
+INSERT INTO repository(name,url) VALUES ('projet_yolo','http://url');
+INSERT INTO event(eventtype, created_at, actor_id, repo_id) VALUES ('PushEvent', '2017-03-07T01:00:00Z');
