@@ -9,7 +9,8 @@ CREATE TABLE event(
    eventtype EVENTYPE NOT NULL,
    created_at TIMESTAMP NOT NULL,
    public BOOL,
-   
+   actor_id INTEGER REFERENCES actor(id),
+   repo_id INTEGER REFERENCES repository(id)
 );
 
 CREATE TABLE actor (
