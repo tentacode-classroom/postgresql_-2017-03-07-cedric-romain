@@ -9,10 +9,11 @@ Exécutez le script suivant
 
 Ce script va allez chercher le repo, installez postgresQL puis le lancer.
 
-Importation du Json venant de github
 
+##Importation du Json venant de github
 
-Ensuite pour récurperer les evenements de GitHub du 7 Mars 2017 de 0h, on va le télécharger et l'extraire, puis le deplacer dans /json
+Ensuite pour récurperer les evenements de GitHub du 7 Mars 2017 de 0h, on va le télécharger et l'extraire, puis le deplacer dans /data
+Note il est important d'être dans le dossier scripts pour lancer le script
 
 ./import_github.sh
 
