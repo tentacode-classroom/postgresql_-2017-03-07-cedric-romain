@@ -1,12 +1,5 @@
 #!/bin/bash
 
-if [ -d ../data ];
-then
-	rm -rf ../data
-	echo "Création du dossier data."
-	mkdir ../data
-fi
-
 #set CURRENT_DIRECTORY variable
 CURRENT_DIRECTORY=`dirname $0`
 CURRENT_DIRECTORY=$CURRENT_DIRECTORY/..
@@ -17,10 +10,10 @@ rm -Rf $CURRENT_DIRECTORY/data
 
 
 echo "Téléchargement des données en cours..."
-wget --quiet -P ../imports https://data.gharchive.org/2017-03-07-{0..1}.json.gz
+wget --quiet -P $CURRENT_DIRECTORY/imports https://data.gharchive.org/2017-03-07-{0..1}.json.gz
 
 echo "Décompression des données en cours..."
-gzip -d ../imports/2017-03-07-{0..1}.json.gz
+gzip -d $CURRENT_DIRECTORY/imports/2017-03-07-{0..1}.json.gz
 
 echo "Décompression terminée."
 
