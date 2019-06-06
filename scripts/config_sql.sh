@@ -1,10 +1,13 @@
 #!/bin/bash
 
-CURRENT_DIRECTORY=`dirname $0` #Variable de dossier actuel
+#Variable de dossier actuel
+CURRENT_DIRECTORY=`dirname $0`
 
-sudo -u postgres psql -f $CURRENT_DIRECTORY/../sql/confpostgre.sql #Lance le script de configuration de psql dans le dossier sql
+#Lance le script de configuration de psql dans le dossier sql
+sudo -u postgres psql -f $CURRENT_DIRECTORY/../sql/confpostgre.sql
 
-sudo service postgresql restart #Redémarre le service psql
+#Redémarre le service psql
+sudo service postgresql restart
 
 
 
