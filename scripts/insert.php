@@ -37,3 +37,11 @@ while (false !== $line = fgets($handle)) {
 if (!empty($buffer)) {
     addJsons($buffer);
 }
+
+$sql = "select data_json->'type' from events_raw limit 10;";
+$i=1;
+foreach ($connection->query($sql) as $row) {
+	print $i . ") ";
+	print $row[0] . "\n";
+	$i++;
+}
