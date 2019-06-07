@@ -1,6 +1,6 @@
 # PostgresQL Dubuis-Loire-Lesueur
 
-## Instalation de PostgresQL
+## Installation de PostgresQL
 
 Exécutez le script suivant
 
