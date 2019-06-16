@@ -44,7 +44,7 @@ Créations des tables 'actor', repository', 'event', 'push_event' et 'issue_even
 `./scripts/populate_events.sh`
 
 ### Création des views
-Pour créer les views il suffit de lancer la commander suivante : 
+Pour créer les views il suffit de lancer la commander suivante :   
 `./scripts/create_views.sh`
 
 ## Sauvegarde et restoration des données
