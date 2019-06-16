@@ -1,5 +1,8 @@
 # PostgresQL Lesueur-Loire-Dubuis
 
+## Fichier pg_admin
+Le fichier 'pg_admin' se trouve dans le dossier '/etc'.
+
 ## Cloner le dépôt git sur sa machine
 Il faut d'abord aller dans le dossier voulu, et avoir installer git au préalable.   
 Ensuite il suffit de lancer la commande suivante :    
