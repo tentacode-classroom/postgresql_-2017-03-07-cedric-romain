@@ -20,7 +20,7 @@ function addJsons(array $buffer)
     $statement->execute($buffer);
 }
 
-$jsonFilePath = sprintf('%s/../data.json', __DIR__);
+$jsonFilePath = sprintf('%s/../../data.json', __DIR__);
 
 $handle = fopen($jsonFilePath, 'r');
 
