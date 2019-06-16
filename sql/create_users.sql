@@ -1,5 +1,6 @@
 --Supprime les différents utilisateurs/tables si elle existent déjà 
 DROP DATABASE IF EXISTS super_admin;
+DROP DATABASE IF EXISTS gitevents;
 DROP ROLE IF EXISTS super_admin;
 DROP ROLE IF EXISTS gitevents;
 
@@ -11,4 +12,4 @@ CREATE DATABASE super_admin OWNER super_admin;
 --Créé un utilisateur 'gitevents' avec '12345' en tant que mdp
 CREATE ROLE gitevents LOGIN PASSWORD '12345';
 --Créé la bdd 'gitevents' dont le propriétaire est 'gitevents'
-ALTER DATABASE gitevents OWNER TO gitevents;
+CREATE DATABASE gitevents OWNER gitevents;
