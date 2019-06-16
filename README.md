@@ -1,7 +1,14 @@
 # PostgresQL Lesueur-Loire-Dubuis
 
-## Installation de PostgreSQL
+## Cloner le dépôt git sur sa machine
+Il faut d'abord aller dans le dossier voulu, et avoir installer git au préalable.
+Ensuite il suffit de lancer la commande suivante :
+`git clone https://github.com/tentacode-classroom/postgresql_-2017-03-07-cedric-romain.git`
 
+Pour la suite des commandes il est mieux de se trouver à la racine du dossier :
+`cd postgresql_-2017-03-07-cedric-romain`
+
+### Installation de PostgreSQL
 Exécutez le script suivant
 
 `./scripts/install_psql.sh` 
@@ -9,17 +16,14 @@ Exécutez le script suivant
 Ce script va allez chercher le repo, installer postgresQL puis le lancer.
 
 ## Configuration de PostgreSQL
-
 `./scripts/config_psql.sh`
 
 ## Importation des données venant de github
-
 Pour récurperer les événements de GitHub du 7 Mars 2017, on va télécharger ces dossiers depuis github archives et les extraire, puis les concaténer dans data.json à la racine du projet 
 
 `./scripts/import_data.sh`
 
-##Création des utilisateurs
-
+## Création des utilisateurs
 `./scripts/create_users.sh`
 
 ## Création des tables de données
