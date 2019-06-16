@@ -10,6 +10,10 @@ Pour la suite des commandes il est mieux de se trouver à la racine du dossier :
 
 ###### ***N.B: Toutes les commandes suivantes sont lancées à partir de la racine du projet. Si vous voulez les lancer à partir du dossier '/scripts' par exemple, il suffira d'enlever '/scripts' aux commandes.***
 
+Si l'une des commandes ne marche pas à cause de PostgreSQL :  
+Relancer/Lancer le service avec :  
+`sudo service postgresql restart`
+
 ## Ordre des commandes à effectuer pour l'installation et l'insertion complète des tables
 
 ### Installation de PostgreSQL
@@ -38,6 +42,10 @@ Créations de la table 'events_raw' et insertion des données à l'intérieur de
 Créations des tables 'actor', repository', 'event', 'push_event' et 'issue_event', et insertion des données :    
 
 `./scripts/populate_events.sh`
+
+### Création des views
+Pour créer les views il suffit de lancer la commander suivante : 
+`./scripts/create_views.sh`
 
 ## Sauvegarde et restoration des données
 
