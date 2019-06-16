@@ -8,7 +8,7 @@ Ensuite il suffit de lancer la commande suivante :
 Pour la suite des commandes il est mieux de se trouver à la racine du dossier :      
 `cd postgresql_-2017-03-07-cedric-romain`   
 
-***N.B: Toutes les commandes suivantes sont lancées à partir de la racine du projet. Si vous voulez les lancer à partir du dossier '/scripts' par exemple, il suffira d'enlever '/scripts' aux commandes.***
+####### ***N.B: Toutes les commandes suivantes sont lancées à partir de la racine du projet. Si vous voulez les lancer à partir du dossier '/scripts' par exemple, il suffira d'enlever '/scripts' aux commandes.***
 
 ## Ordre des commandes à effectuer pour l'installation et l'insertion complète des tables
 
