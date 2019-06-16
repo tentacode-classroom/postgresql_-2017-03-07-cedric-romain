@@ -5,8 +5,8 @@ Il faut d'abord aller dans le dossier voulu, et avoir installer git au préalabl
 Ensuite il suffit de lancer la commande suivante :
 `git clone https://github.com/tentacode-classroom/postgresql_-2017-03-07-cedric-romain.git`
 
-Pour la suite des commandes il est mieux de se trouver à la racine du dossier : \n
-`cd postgresql_-2017-03-07-cedric-romain`
+Pour la suite des commandes il est mieux de se trouver à la racine du dossier :
+```cd postgresql_-2017-03-07-cedric-romain``` 
 
 ### Installation de PostgreSQL
 Exécutez le script suivant
