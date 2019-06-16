@@ -1,28 +1,34 @@
-# PostgresQL Dubuis-Loire-Lesueur
+# PostgresQL Lesueur-Loire-Dubuis
 
-## Installation de PostgresQL
+## Installation de PostgreSQL
 
 Exécutez le script suivant
 
-./setup_postresql.sh 
+`./scripts/install_psql.sh` 
 
+Ce script va allez chercher le repo, installer postgresQL puis le lancer.
 
-Ce script va allez chercher le repo, installez postgresQL puis le lancer.
+## Configuration de PostgreSQL
 
+`./scripts/config_psql.sh`
 
-## Importation du Json venant de github
+## Importation des données venant de github
 
-Ensuite pour récurperer les evenements de GitHub du 7 Mars 2017 de 0h, on va le télécharger et l'extraire, puis le deplacer dans /data
-Note il est important d'être dans le dossier scripts pour lancer le script
+Pour récurperer les événements de GitHub du 7 Mars 2017, on va télécharger ces dossiers depuis github archives et les extraire, puis les concaténer dans data.json à la racine du projet 
 
-./import_github.sh
+`./scripts/import_data.sh`
+
+##Création des utilisateurs
+
+`./scripts/create_users.sh`
 
 ## Création des tables de données
-Créations table, actor, repo, events, push_events
+Créations de la table 'events_raw' et insertion des données à l'intérieur de celle-ci
 
-./create_event_database
+`./scripts/populate_events_raw.sh`
 
-## Configuration de postgresQL
-Changemement sur le port 1234 et ajout de la memoire de travail sur 128Mb
+Créations des tables 'actor', repository', 'event', 'push_event' et 'issue_event'
 
-./update_configuration
+`./scripts/populate_events.sh`
+
+
